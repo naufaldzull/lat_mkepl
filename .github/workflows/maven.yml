@@ -36,8 +36,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    # - name: Analisis sonarcloud
-    #   env:
-    #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    #   run: mvm -B sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsona 
+    - name: Analisis sonarcloud
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: mvm -B sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=naufaldzull -Dsonar.projectKey=naufaldzull_lat_mkepl 
 
