@@ -14,8 +14,8 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch: 
-  release:
-    types: [created]
+  # release:
+  #   types: [created]
 
 jobs:
   build:
@@ -23,9 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-    permissions:
-      contents: write
-      packages: write
+    # permissions:
+    #   contents: write
+    #   packages: write
 
     steps:
     - uses: actions/checkout@v4
