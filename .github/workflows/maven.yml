@@ -36,7 +36,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
         server-id: github
-        setting-path: ${{ github.workspace }}
+        settings-path: ${{ github.workspace }}
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Analisis sonarcloud
